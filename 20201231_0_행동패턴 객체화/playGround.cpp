@@ -14,9 +14,9 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
-	_psh_rc = RectMake(50, 50, 50, 50);
-	_SCH_rc = RectMake(100, 50, 50, 50);
-	_KDH_rc = RectMake(150, 50, 50, 50);
+	_psh_rc = RectMake(50, 50, 50, 50);		//·ºÆ®Àö
+	_SCH_rc = RectMake(100, 50, 50, 50);	//·ºÆ®Àö
+	_KDH_rc = RectMake(150, 50, 50, 50);	//·ºÆ®Àö
 	IMAGEMANAGER->addImage("»õ¹è°æ", "background.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("ÃÑ¾Ë", "bullet.bmp", 21, 21, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addFrameImage("battle", "battle.bmp", 1536, 79, 16, 1, true, RGB(255, 0, 255));
