@@ -8,7 +8,7 @@ class playGround : public gameNode
 {
 private:
 	RECT _psh_rc;
-
+	RECT _SCH_rc;
 public:
 	playGround();
 	~playGround();
