@@ -2,6 +2,13 @@
 #include "gameNode.h"
 #include "ghostScene.h"
 
+RECT tagRect
+{
+	RECT rc;
+	int x,y;
+};
+
+
 class playGround : public gameNode
 {
 private:
@@ -11,10 +18,10 @@ public:
 	playGround();
 	~playGround();
 
-	virtual HRESULT init();	//ÃÊ±âÈ­ Àü¿ë ÇÔ¼ö
-	virtual void release();	//¸Þ¸ð¸® ÇØÁ¦ ÇÔ¼ö
-	virtual void update();	//¿¬»ê Àü¿ë
-	virtual void render();	//±×¸®±â Àü¿ë
+	virtual HRESULT init();	//ì´ˆê¸°í™” ì „ìš© í•¨ìˆ˜
+	virtual void release();	//ë©”ëª¨ë¦¬ í•´ì œ í•¨ìˆ˜
+	virtual void update();	//ì—°ì‚° ì „ìš©
+	virtual void render();	//ê·¸ë¦¬ê¸° ì „ìš©
 
 };
 
