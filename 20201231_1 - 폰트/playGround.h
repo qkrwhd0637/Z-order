@@ -6,6 +6,7 @@ RECT tagRect
 {
 	RECT rc;
 	int x,y;
+	int r,g,b;
 };
 
 
