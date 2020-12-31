@@ -10,6 +10,7 @@ private:
 	RECT _psh_rc;
 	RECT _SCH_rc;
 	RECT _KDH_rc;
+	RECT _KDK_rc;
 public:
 	playGround();
 	~playGround();
