@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "bullets.h"
 
-
+// 
 HRESULT bullet::init(const char * imageName, int bulletMax, float range)
 {
 	_imageName = imageName;
@@ -200,7 +200,7 @@ void rectMissile::render()
 
 void rectMissile::fire(float x, float y)
 {
-	//-¸í-
+	//-Â¸Ã­-
 	if (_bulletMax < _vBullet.size()) return;
 
 	tagBullet bullet;
