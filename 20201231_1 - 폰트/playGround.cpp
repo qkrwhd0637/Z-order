@@ -14,10 +14,14 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
-	//IMAGEMANAGER->addImage("»õ¹è°æ", "background.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
+	//IMAGEMANAGER->addImage("ìƒˆë°°ê²½", "background.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
 	
-	SCENEMANAGER->addScene("¸¶°è¾À", new ghostScene);
-	SCENEMANAGER->changeScene("¸¶°è¾À");
+	SCENEMANAGER->addScene("ë§ˆê³„ì”¬", new ghostScene);
+	SCENEMANAGER->changeScene("ë§ˆê³„ì”¬");
+	
+	Dh.x = WINSIZEX/2 + 100;
+	Dh.y = WINSIZEY/2;
+	Dh.rc = RectMakeCenter(Dh.x, Dh.y, 100, 100);
 	
 	return S_OK;
 }
@@ -43,15 +47,15 @@ void playGround::update()
 void playGround::render()
 {
 	PatBlt(getMemDC(), 0, 0, WINSIZEX, WINSIZEY, WHITENESS);
-	//================ À§¿¡ °ÇµéÁö ¸¶¶ó ==============================
+	//================ ìœ„ì— ê±´ë“¤ì§€ ë§ˆë¼ ==============================
 	
-	//IMAGEMANAGER->findImage("»õ¹è°æ")->render(getMemDC());
-	
+	//IMAGEMANAGER->findImage("ìƒˆë°°ê²½")->render(getMemDC());
+	Rectangle(getMemDC(), Dh.rc);
 	
 	SCENEMANAGER->render();
 
 	TIMEMANAGER->render(getMemDC());
-	//================= ¾Æ·¡µµ °ÇµéÁö ¸¶¶ó ==============================
+	//================= ì•„ëž˜ë„ ê±´ë“¤ì§€ ë§ˆë¼ ==============================
 	_backBuffer->render(getHDC());
 }
 
