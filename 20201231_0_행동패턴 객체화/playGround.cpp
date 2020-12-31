@@ -16,6 +16,7 @@ HRESULT playGround::init()
 
 	_psh_rc = RectMake(50, 50, 50, 50);
 	_SCH_rc = RectMake(100, 50, 50, 50);
+	_KDH_rc = RectMake(150, 50, 50, 50);
 	IMAGEMANAGER->addImage("새배경", "background.bmp", WINSIZEX, WINSIZEY, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addImage("총알", "bullet.bmp", 21, 21, true, RGB(255, 0, 255));
 	IMAGEMANAGER->addFrameImage("battle", "battle.bmp", 1536, 79, 16, 1, true, RGB(255, 0, 255));
@@ -71,6 +72,11 @@ void playGround::render()
 	Rectangle(getMemDC(), _SCH_rc);
 	SelectObject(getMemDC(), oldBrush2);
 	DeleteObject(brush2);
+	HBRUSH brush3 = CreateSolidBrush(RGB(0, 255, 0));
+	HBRUSH oldbrush3 = (HBRUSH)SelectObject(getMemDC(), brush3);
+	Rectangle(getMemDC(), _KDH_rc);
+	SelectObject(getMemDC(), oldbrush3);
+	DeleteObject(brush3);
 
 	//================= 아래도 건들지 마라 ==============================
 	_backBuffer->render(getHDC());
