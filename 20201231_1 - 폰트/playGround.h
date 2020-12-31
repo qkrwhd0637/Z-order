@@ -12,7 +12,7 @@ RECT tagRect
 class playGround : public gameNode
 {
 private:
-	
+	tagRect DH;
 
 public:
 	playGround();
